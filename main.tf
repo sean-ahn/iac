@@ -4,6 +4,10 @@ terraform {
       source  = "integrations/github"
       version = ">= 4.0"
     }
+    tfe = {
+      source  = "hashicorp/tfe"
+      version = "0.25.3"
+    }
   }
 
   backend "remote" {
