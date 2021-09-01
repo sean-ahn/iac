@@ -1,3 +1,4 @@
 resource "tfe_organization" "sean-ahn" {
-  # (resource arguments)
+  name  = "sean-ahn"
+  email = "sean9509@gmail.com"
 }
