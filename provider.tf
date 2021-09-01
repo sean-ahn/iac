@@ -4,7 +4,7 @@ variable "github_token" {
 }
 
 provider "github" {
-  token = "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"
+  token = var.github_token
 }
 
 variable "terraform_cloud_token" {
