@@ -1,7 +1,7 @@
 resource "github_repository" "gotzdatacheck" {
   name          = "gotzdatacheck"
   visibility    = "public"
-  description   = "gotzdatacheck checks that time/tzdata package has imported in main package"
+  description   = "gotzdatacheck checks that the time/tzdata package is imported into the main package"
   has_wiki      = false
   has_projects  = false
   has_downloads = false
