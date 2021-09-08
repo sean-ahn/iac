@@ -17,6 +17,7 @@ resource "github_repository" "iac" {
   allow_rebase_merge     = false
   allow_squash_merge     = true
   delete_branch_on_merge = true
+  vulnerability_alerts   = true
   auto_init              = null
   gitignore_template     = null
   license_template       = ""
@@ -39,6 +40,7 @@ resource "github_repository" "gotzdatacheck" {
   allow_rebase_merge     = false
   allow_squash_merge     = true
   delete_branch_on_merge = true
+  vulnerability_alerts   = true
   auto_init              = null
   gitignore_template     = null
   license_template       = ""
