@@ -8,6 +8,7 @@ resource "github_repository" "iac" {
   has_issues    = true
   archived      = false
   topics = [
+    "infrastructure-as-code",
     "iac",
     "terraform",
     "terraform-cloud"
