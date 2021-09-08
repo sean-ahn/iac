@@ -8,6 +8,7 @@ resource "github_repository" "iac" {
   has_issues    = true
   archived      = false
   topics = [
+    "infrastructure-as-code",
     "iac",
     "terraform",
     "terraform-cloud"
@@ -16,6 +17,7 @@ resource "github_repository" "iac" {
   allow_rebase_merge     = false
   allow_squash_merge     = true
   delete_branch_on_merge = true
+  vulnerability_alerts   = true
   auto_init              = null
   gitignore_template     = null
   license_template       = ""
@@ -38,6 +40,33 @@ resource "github_repository" "gotzdatacheck" {
   allow_rebase_merge     = false
   allow_squash_merge     = true
   delete_branch_on_merge = true
+  vulnerability_alerts   = true
+  auto_init              = null
+  gitignore_template     = null
+  license_template       = ""
+  homepage_url           = ""
+}
+
+resource "github_repository" "blog-web" {
+  name          = "blog-web"
+  visibility    = "public"
+  description   = ""
+  has_wiki      = false
+  has_projects  = false
+  has_downloads = false
+  has_issues    = true
+  archived      = false
+  topics = [
+    "typescript",
+    "reactjs",
+    "nextjs",
+    "tailwindcss"
+  ]
+  allow_merge_commit     = false
+  allow_rebase_merge     = false
+  allow_squash_merge     = true
+  delete_branch_on_merge = true
+  vulnerability_alerts   = true
   auto_init              = null
   gitignore_template     = null
   license_template       = ""
