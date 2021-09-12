@@ -42,7 +42,7 @@ jobs:
       continue-on-error: true
 
     - name: Comment Pull Request
-      uses: actions/github-script@4
+      uses: actions/github-script@v4
       if: github.event_name == 'pull_request'
       env:
         PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
