@@ -24,7 +24,7 @@ resource "github_repository" "iac" {
   homepage_url           = "https://app.terraform.io/app/sean-ahn/workspaces/iac"
 }
 
-resource "github_branch_protection" "iac:main" {
+resource "github_branch_protection" "iac_main" {
   repository_id = github_repository.iac.name
   pattern       = "main"
   required_status_checks {
