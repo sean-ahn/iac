@@ -33,6 +33,13 @@ resource "github_branch_protection" "iac_main" {
   }
 }
 
+resource "github_repository_file" "iac_CODEOWNERS" {
+  repository          = github_repository.iac.name
+  file                = "CODEOWNERS"
+  content             = "*       @sean-ahn"
+  overwrite_on_create = true
+}
+
 resource "github_repository" "gotzdatacheck" {
   name          = "gotzdatacheck"
   visibility    = "public"
