@@ -35,8 +35,8 @@ resource "github_branch_protection" "iac_main" {
 
 resource "github_repository_file" "iac_CODEOWNERS" {
   repository          = github_repository.iac.name
-  file                = "CODEOWNERS"
-  content             = "*       @sean-ahn"
+  file                = ".github/CODEOWNERS"
+  content             = "*       @sean-ahn\n"
   overwrite_on_create = true
 }
 
