@@ -24,6 +24,15 @@ resource "github_repository" "iac" {
   homepage_url           = "https://app.terraform.io/app/sean-ahn/workspaces/iac"
 }
 
+resource "github_branch_protection" "iac_main" {
+  repository_id = github_repository.iac.name
+  pattern       = "main"
+  required_status_checks {
+    strict   = true
+    contexts = ["Terraform Cloud/sean-ahn/iac", "lint", "terraform"]
+  }
+}
+
 resource "github_repository" "gotzdatacheck" {
   name          = "gotzdatacheck"
   visibility    = "public"
@@ -70,5 +79,5 @@ resource "github_repository" "blog-web" {
   auto_init              = null
   gitignore_template     = null
   license_template       = ""
-  homepage_url           = ""
+  homepage_url           = "blog-web-flame.vercel.app"
 }
