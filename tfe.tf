@@ -10,6 +10,7 @@ resource "tfe_organization" "sean-ahn" {
 #   organization        = tfe_organization.sean-ahn.name
 #   speculative_enabled = true
 #   queue_all_runs      = false
+#   auto_apply          = true
 #   vcs_repo {
 #     identifier     = "sean-ahn/iac"
 #     oauth_token_id = ""
