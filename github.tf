@@ -70,5 +70,5 @@ resource "github_repository" "blog-web" {
   auto_init              = null
   gitignore_template     = null
   license_template       = ""
-  homepage_url           = ""
+  homepage_url           = "blog-web-flame.vercel.app"
 }
