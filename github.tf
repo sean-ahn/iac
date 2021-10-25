@@ -106,7 +106,7 @@ resource "github_repository" "user" {
     "protobuf",
     "buf-cli",
     "buf-schema-registry",
-    "dynamodb",
+    "mysql",
     "jwt"
   ]
   allow_merge_commit     = false
@@ -118,4 +118,13 @@ resource "github_repository" "user" {
   gitignore_template     = null
   license_template       = "mit"
   homepage_url           = ""
+}
+
+resource "github_branch_protection" "user_main" {
+  repository_id = github_repository.user.name
+  pattern       = "main"
+  required_status_checks {
+    strict   = true
+    contexts = ["proto", "backend", "CodeQL", "Analyze (go)"]
+  }
 }
