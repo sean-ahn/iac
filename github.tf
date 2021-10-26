@@ -92,7 +92,7 @@ resource "github_repository" "blog-web" {
 resource "github_repository" "user" {
   name          = "user"
   visibility    = "public"
-  description   = ""
+  description   = "A service providing basic user system with SMS OTP verification and JWT authentication"
   has_wiki      = false
   has_projects  = false
   has_downloads = false
@@ -125,6 +125,6 @@ resource "github_branch_protection" "user_main" {
   pattern       = "main"
   required_status_checks {
     strict   = true
-    contexts = ["proto", "backend", "CodeQL", "Analyze (go)"]
+    contexts = ["proto", "backend", "build", "CodeQL", "Analyze (go)"]
   }
 }
